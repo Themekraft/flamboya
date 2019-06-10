@@ -27,7 +27,7 @@
 /*-----navigation-----*/
 
 #topnav {
-    background-color: var(--flamboya-white);
+    background-color:var(--flamboya-white);
     height: 85px;
     transition: all ease 0.5s;
 }
