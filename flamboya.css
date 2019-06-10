@@ -1,0 +1,199 @@
+/*-----color-variables-----*/
+
+:root{
+    --flamboya-grey: rgba(20,20,20,0.6);
+    --flamboya-darkgrey: rgba(0,0,0,0.8);
+    --flamboya-white: rgba(245, 251, 255, 0.7);
+    --flamboya-thickwhite: rgba(245, 251, 255, 0.9);
+}
+
+/*-----general-----*/
+
+/**{
+    text-decoration:none;
+}*/
+#mainwrap{
+    margin-top: 0px;
+}
+.main-content{
+    padding: 0px;
+}
+
+/*article .entry-content .wp-block-nk-awb {
+    padding-top: 150px;
+}*/
+
+
+/*-----navigation-----*/
+
+#topnav {
+    background-color: var(--flamboya-white);
+    height: 85px;
+    transition: all ease 0.5s;
+}
+
+#topnav-logo {
+    height: 85px;
+    width: 80%;
+    max-width: 600px;
+    transition: all ease 0.5s;
+}
+
+#topnav-logo img{
+    height: auto;
+    max-height: 80%;
+    margin-left: 0px;
+    transition: all ease 0.5s;
+}
+
+#topnav-title {
+    display: none;
+}
+
+#topnav #main-menu {
+    transition: all ease 0.5s;
+}
+
+#topnav #main-menu li a{
+    /*height: 20px;*/
+    color: black;
+    font-weight: 700;
+}
+
+#topnav li.active a,
+#topnav li a:hover,
+#topnav li.active a:hover,
+#topnav li a:focus,
+#topnav li.active a:focus{
+    background: transparent;
+    color: var(--flamboya-grey);
+}
+
+.tf-burger {
+    height: 85px;
+}
+
+.tf-burger span {
+    top: 50%;
+}
+
+.tf-burger span,
+.tf-burger span::after,
+.tf-burger span::before {
+    background: black;
+}
+
+.tf-burger:hover span,
+.tf-burger:hover span::after,
+.tf-burger:hover span::before {
+    opacity: 0.5;
+}
+
+
+
+/*-----home-----*/
+
+body.home-page{
+    background-image:url(http://flamboyan-records.local/wp-content/uploads/2019/01/IMG_9806.jpg);
+    background-attachment: fixed;
+    background-size: auto 55%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+body.home-page #sitewrap{
+    padding-top: 45vh;
+}
+
+
+/*-----footer-----*/
+#footer {
+    background-color: var(--flamboya-white);
+    padding: 0px;
+    border: none;
+}
+#footer #footer-last {
+    background: none;
+}
+#footer a {
+    color: black;
+}
+#footer li.active a,
+#footer li a:hover,
+#footer li.active a:hover,
+#footer li a:focus,
+#footer li.active a:focus{
+    background: transparent;
+    color: var(--flamboya-grey);
+}
+
+/*-----media-queries-----*/
+
+@media all and (min-width:552px) and (orientation:landscape){
+    body.home-page{
+    background-size: cover;
+    }
+    body.home-page #sitewrap{
+    padding-top: 20vh;
+    }
+    body.home-page #content{
+        width: 60%;
+        float: right;
+        }
+}
+
+@media all and (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    #topnav #main-menu {
+        padding-top: 35px;
+    }
+    #topnav .navbar-brand {
+        width: 55%;
+    }
+    #topnav #topnav-logo {
+        width:95%;
+    }
+    body.home-page #sitewrap{
+    padding-top: 35vh;
+    }
+    body.home-page{
+    background-image:url(http://flamboyan-records.local/wp-content/uploads/2019/01/IMG_9806.jpg);
+    background-attachment: fixed;
+    background-size: 100% auto;
+    }
+    
+}
+@media all and (min-width: 970px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media all and (min-width:768px) and (orientation:landscape){
+    body.home-page #sitewrap{
+    padding-top: 25vh;
+    }
+    body.home-page{
+        background-size: cover;
+    }
+}
+
+@media all and (min-width: 1024px) {
+        #topnav {
+            height: 148px;
+        }
+        #topnav-logo {
+            height: 148px;
+            width: auto
+        }
+        #topnav #main-menu {
+            padding-top: 81px;
+        }
+        body.home-page #content{
+        width: 60%;
+        float: right;
+        }
+
+}
