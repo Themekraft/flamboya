@@ -9,6 +9,10 @@
 
 /*-----general-----*/
 
+body #mainwrap {
+    min-height: 100vh;
+}
+
 /**{
     text-decoration:none;
 }*/
@@ -41,7 +45,7 @@
 
 #topnav-logo img{
     height: auto;
-    max-height: 80%;
+    max-height: 70%;
     margin-left: 0px;
     transition: all ease 0.5s;
 }
@@ -90,6 +94,61 @@
 }
 
 
+/*-----soundcloud player-----*/
+.fap-toggle {
+    width: 220px;
+    top: 0px!important;
+    height:0px!important;
+    background: transparent!important;
+    border-color: transparent!important;
+    color: transparent!important;
+}
+.fap-toggle::before{
+    content: "FLAMBOYA on soundcloud";
+    position: absolute;
+    top: -22px;
+    color: white;
+    left: 59px;
+    transition: all ease 0.5s;
+}
+.fap-toggle::after{
+    content:url("http://flamboyan-records.local/wp-content/uploads/2019/06/flamboya_baum_weiss.png");
+    position: absolute;
+    top: -70px;
+    left: 0vw;
+    opacity: 0.6;
+    transition: all ease 0.5s;
+}
+.fap-toggle:hover::after{
+    opacity: 1.0;
+    top: -150px;
+}
+.fap-toggle:hover::before{
+    top: -102px;
+    color: var(--flamboya-darkgrey);
+    z-index: 999;
+}
+.fap-open .fap-toggle::after{
+    opacity: 1.0;
+    /*top: -241px;*/
+    top: -70px;
+}
+.fap-open .fap-toggle::before{
+    /*top: -193px;*/
+    top: -22px;
+    z-index: -10;
+}
+
+/*body.home-page .fap-toggle::after {
+    content:url("http://flamboyan-records.local/wp-content/uploads/2019/06/flamboya_tree_black.png");
+}
+body.home-page .fap-toggle:hover::after {
+    opacity: 0.8!important;
+}
+body.home-page .fap-open .fap-toggle:hover::after {
+    opacity: 0.8;
+}*/
+
 
 /*-----home-----*/
 
@@ -105,10 +164,40 @@ body.home-page #sitewrap{
     padding-top: 45vh;
 }
 
+ 
+ body.home-page #sitewrap{
+    padding-top: 50vh;
+}
+
+body.home-page #content{
+    margin-right: 20px;
+    background-color: var(--flamboya-white);
+}
+
+
+/*-----artists-----*/
+
+body.page-id-489{
+    background-image:url(http://flamboyan-records.local/wp-content/uploads/2019/01/IMG_9806.jpg);
+    background-attachment: fixed;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+ }
+body.page-id-489 #sitewrap{
+    padding-top: 30vh;
+}
+div.wp-block-media-text.alignwide{
+    background-color: var(--flamboya-white);
+}
+
+
+
 
 /*-----footer-----*/
 #footer {
-    background-color: var(--flamboya-white);
+    /*background-color: var(--flamboya-white);*/
+    background-color: white;
     padding: 0px;
     border: none;
 }
@@ -130,13 +219,18 @@ body.home-page #sitewrap{
 /*-----media-queries-----*/
 
 @media all and (min-width:552px) and (orientation:landscape){
-    body.home-page{
+    body.home-page,
+    body.page-id-489{
     background-size: cover;
     }
     body.home-page #sitewrap{
     padding-top: 20vh;
     }
+    body.page-id-489 #sitewrap{
+    padding-top: 30vh;
+    }
     body.home-page #content{
+        padding: 25px;
         width: 60%;
         float: right;
         }
@@ -147,7 +241,7 @@ body.home-page #sitewrap{
         width: 100%;
     }
     #topnav #main-menu {
-        padding-top: 35px;
+        padding-top: 37px;
     }
     #topnav .navbar-brand {
         width: 55%;
@@ -175,7 +269,8 @@ body.home-page #sitewrap{
     body.home-page #sitewrap{
     padding-top: 25vh;
     }
-    body.home-page{
+    body.home-page,
+    body.page-id-489{
         background-size: cover;
     }
 }

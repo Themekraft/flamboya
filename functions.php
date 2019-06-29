@@ -237,6 +237,15 @@ function _tk_scripts()
             '20120202'
         );
     }
+
+    // load windowscrollnav.js
+    wp_enqueue_script(
+        '_tk-windowscrollnav',
+        get_template_directory_uri() . '/includes/js/windowscrollnav.js',
+        array( 'jquery' ),
+        true
+    );
+
 }
 
 add_action( 'wp_enqueue_scripts', '_tk_scripts', 880 );

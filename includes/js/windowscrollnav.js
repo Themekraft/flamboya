@@ -28,10 +28,3 @@ else
 	    document.getElementById("main-menu").style.padding = "81px 0px";
 	  }
 } 
-
-
-// $(document).ready(function() {
-// 	$(window).scroll(function(){
-// 		$("#tallContainer").css("background-color","black");
-// 	});
-// });
