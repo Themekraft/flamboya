@@ -591,7 +591,7 @@ function blog_template_style()
     if ( get_theme_mod( 'larry_blog_archive_sidebars' ) == true ) {
         $template_style = 'content-2-col';
     } else {
-        $template_style = 'content-3-col';
+        $template_style = 'content-1-col';
     }
     
     return $template_style;
