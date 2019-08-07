@@ -18,13 +18,13 @@ else
     document.getElementById("topnav").style.position = "fixed";
     document.getElementById("topnav").style.background = "white";
     document.getElementById("topnav-logo").style.height = "130%";
-    document.getElementById("main-menu").style.padding = "10px 0px";
+    document.getElementById("main-menu").style.paddingTop = "10px";
 
 	} else {
 	    document.getElementById("topnav").style.position = "absolute";
 	    document.getElementById("topnav").style.background = "var(--flamboya-white)";
 	    document.getElementById("topnav").style.height = "148px";
 	    document.getElementById("topnav-logo").style.height = "148px";
-	    document.getElementById("main-menu").style.padding = "81px 0px";
+	    document.getElementById("main-menu").style.paddingTop = "81px";
 	  }
 } 

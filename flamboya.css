@@ -96,6 +96,23 @@ body #mainwrap {
     opacity: 0.5;
 }
 
+/*-----mobile menue-----*/
+#slidenav-wrap .slidenav {
+	padding-top: 78px;
+}
+
+#slidenav-wrap.tf-open, #topnav.tf-open{
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+}
+
+#sitewrap.slidenav-open{
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+}
+
 
 /*-----soundcloud player-----*/
 .fap-toggle {
@@ -183,6 +200,18 @@ body.home-page h2{
    margin-top: 30px;
    margin-bottom: 0px;
 }
+body.home-page h2:hover, 
+body.home-page h3:hover,
+body.home-page .entry-content p:hover,
+body.home-page h2:hover + h3, 
+body.home-page h2:hover ~ p:first-of-type,
+body.home-page h3:hover + p,
+body.home-page h2:hover + p,
+body.home-page .entry-content p:hover + .wp-block-button,
+body.home-page .entry-content p:hover + ul{
+	background-color: white!important;
+}
+
 body.home-page h3{
    background-color: var(--flamboya-white);
    padding: 10px 50px 10px 50px;
@@ -296,6 +325,63 @@ body.page-id-489 .wp-block-column:hover div.wp-block-media-text.alignwide*/ {
   }
   } 
 
+
+/*-----blog-----*/
+
+body.blog{
+	background-color: lightblue;
+}
+body.blog #mainwrap{
+	    margin-top: 240px;
+}
+
+body.blog article{
+	position: relative;
+	overflow: hidden;
+	background-color: var(--flamboya-white)!important;
+	box-shadow: none!important;
+	border: none!important;
+	transition: all ease 0.7s;
+}
+body.blog article:hover{
+	background-color: white!important;
+}
+
+body.blog article h1.entry-title a{
+	color: var(--flamboya-darkgrey);
+	font-size: 27px;
+}
+
+body.blog article:hover h1.entry-title a{
+	text-decoration: none;
+}
+
+
+body.blog article div.entry-summary{
+	height: auto;
+}
+
+body.blog article div.entry-summary p{
+	font-size: 17px;
+	color: var(--flamboya-darkgrey);
+}
+
+body.blog article.has-post-thumbnail div.entry-summary p{
+	width: 72%;
+}
+
+body.blog article .btn-primary {
+    background: var(--flamboya-grey);
+}
+
+body.blog article .btn-primary:hover {
+    background: var(--flamboya-darkgrey);
+}
+
+
+
+
+
 /*-----footer-----*/
 #footer {
     /*background-color: var(--flamboya-white);*/
@@ -365,6 +451,13 @@ body.page-id-489 .wp-block-column:hover div.wp-block-media-text.alignwide*/ {
     .container {
         width: 970px;
     }
+    			/*-----Aufbau Article Ansicht muss über Grid gelöst werden -----*/
+
+	body.blog article img {
+		position: absolute;
+		max-width: 230px;
+		right: 0px;
+	}
 }
 
 @media all and (min-width:768px) and (orientation:landscape){
@@ -386,7 +479,7 @@ body.page-id-489 .wp-block-column:hover div.wp-block-media-text.alignwide*/ {
             width: auto
         }
         #topnav #main-menu {
-            padding-top: 81px;
+            padding: 81px 0px 0px 0px;
         }
         body.home-page #content{
         width: 60%;
