@@ -9,11 +9,14 @@
 
 /*-----general-----*/
 
-body.page {
-      background-color: lightgrey!important;
+body{
+	background-color: lightblue!important;
 }
 body #mainwrap {
     min-height: 100vh;
+}
+body #sitewrap{
+    padding-top: 30vh;
 }
 
 /**{
@@ -200,7 +203,7 @@ body.home-page h2{
    margin-top: 30px;
    margin-bottom: 0px;
 }
-body.home-page h2:hover, 
+/*body.home-page h2:hover, 
 body.home-page h3:hover,
 body.home-page .entry-content p:hover,
 body.home-page h2:hover + h3, 
@@ -208,7 +211,12 @@ body.home-page h2:hover ~ p:first-of-type,
 body.home-page h3:hover + p,
 body.home-page h2:hover + p,
 body.home-page .entry-content p:hover + .wp-block-button,
-body.home-page .entry-content p:hover + ul{
+body.home-page .entry-content p:hover + ul*/
+body.home-page .entry-content:hover h2,
+body.home-page .entry-content:hover p,
+body.home-page .entry-content:hover .wp-block-button,
+body.home-page .entry-content:hover ul,
+body.home-page .entry-content:hover h3{
 	background-color: white!important;
 }
 
@@ -242,9 +250,9 @@ body.page-id-489{
     background-repeat: no-repeat;
     background-position: center top;
  }
-body.page-id-489 #sitewrap{
+/*body.page-id-489 #sitewrap{
     padding-top: 30vh;
-}
+}*/
 div.wp-block-media-text.alignwide{
     /*background-color: var(--flamboya-white);*/
 }
@@ -328,12 +336,9 @@ body.page-id-489 .wp-block-column:hover div.wp-block-media-text.alignwide*/ {
 
 /*-----blog-----*/
 
-body.blog{
-	background-color: lightblue;
-}
-body.blog #mainwrap{
+/*body.blog #mainwrap{
 	    margin-top: 240px;
-}
+}*/
 
 body.blog article{
 	position: relative;

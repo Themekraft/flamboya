@@ -1,4 +1,4 @@
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction();};
 
 function scrollFunction() {
 if (screen.width <= 600) { 
@@ -27,4 +27,4 @@ else
 	    document.getElementById("topnav-logo").style.height = "148px";
 	    document.getElementById("main-menu").style.paddingTop = "81px";
 	  }
-} 
+}
