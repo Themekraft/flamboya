@@ -127,19 +127,24 @@ body #sitewrap{
     color: transparent!important;
 }
 .fap-toggle::before{
-    content: "FLAMBOYA on soundcloud";
+    content: "FLAMBOYA \A on soundcloud";
     position: absolute;
-    top: -22px;
+    top: -32px;
     color: white;
-    left: 59px;
+    left: 69px;
     transition: all ease 0.5s;
+    z-index: 99999;
+    color: var(--flamboya-darkgrey) !important;
+    font-weight: 700;
+    white-space: pre;
+    font-size: 12px;
 }
 .fap-toggle::after{
     content:url("http://flamboyan-records.local/wp-content/uploads/2019/06/flamboya_baum_weiss.png");
     position: absolute;
     top: -70px;
     left: 0vw;
-    opacity: 0.6;
+    opacity: 1.0;
     transition: all ease 0.5s;
 }
 .fap-toggle:hover::after{
@@ -162,6 +167,39 @@ body #sitewrap{
     z-index: -10;
 }
 
+.fap-wrapper{
+ background: var(--flamboya-white)!important;
+ border: transparent!important;
+}
+.fap-meta .fap-title{
+ font-size: 28px;
+ text-align: center;
+ padding-top: 20px;
+ font-weight: 500;
+}
+.fap-wrapper .fap-toolbar > .fap-track-info{
+ height: 60px!important;
+ width: 100%;
+}
+.fap-controls{
+ width: 100%!important;
+ height: 130px!important;
+}
+.fap-wrapper .fap-play-controls {
+    margin: 0 auto;
+}
+.fap-toolbar > .fap-actions{
+ height: 30px!important;
+}
+.fap-timebar > .fap-loading-bar{
+ border-color: var(--flamboya-darkgrey)!important;
+}
+.fap-loading-bar > div{
+ background: transparent none repeat scroll 0% 0%!important;
+}
+.fap-loading-bar > div.fap-progress-bar {
+ background: var(--flamboya-darkgrey) none repeat scroll 0% 0%!important;
+}
 /*body.home-page .fap-toggle::after {
     content:url("http://flamboyan-records.local/wp-content/uploads/2019/06/flamboya_tree_black.png");
 }
@@ -188,14 +226,27 @@ body.home-page #sitewrap{
 }
 
  
- body.home-page #sitewrap{
-    padding-top: 50vh;
+body.home-page #sitewrap{
+    padding-top: 20vh;
 }
 
 body.home-page #content{
     margin-right: 20px;
    /* background-color: var(--flamboya-white);*/
 }
+
+/*body.home-page #content::before{
+   content:"";
+   background: var(--flamboya-darkgrey);
+   width: 30px;
+   height: 30px;
+   border-radius: 0 0 30px 0;
+   position: absolute;
+   top: 30px;
+   left: 14px;
+   background-blend-mode: multiply;
+}*/
+
 body.home-page #topnav{
  -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
@@ -519,13 +570,17 @@ body.blog article .btn-primary:hover {
     .container {
         width: 970px;
     }
-    			/*-----Aufbau Article Ansicht muss über Grid gelöst werden -----*/
 
-	body.blog article img {
-		position: absolute;
-		max-width: 230px;
-		right: 0px;
-	}
+  body.home-page #sitewrap{
+    padding-top: 50vh;
+  }
+  
+      			/*-----Aufbau Article Ansicht muss über Grid gelöst werden -----*/
+  body.blog article img {
+   position: absolute;
+   max-width: 230px;
+   right: 0px;
+  }
 }
 
 @media all and (min-width:768px) and (orientation:landscape){
