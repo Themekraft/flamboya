@@ -245,6 +245,14 @@ function _tk_scripts()
         array( 'jquery' ),
         true
     );
+    
+    // load soundcloud_toggle.js
+    wp_enqueue_script(
+        '_tk-soundcloud_toggle',
+        get_template_directory_uri() . '/includes/js/soundcloud_toggle.js',
+        array( 'jquery' ),
+        true
+    );
 
 }
 

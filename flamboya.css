@@ -10,7 +10,7 @@
 /*-----general-----*/
 
 body{
-	background-color: lightblue!important;
+	background-color: var(--flamboya-darkgrey)!important;
 }
 body #mainwrap {
     min-height: 100vh;
@@ -37,8 +37,9 @@ body #sitewrap{
 /*-----navigation-----*/
 
 #topnav {
-    background-color:var(--flamboya-white);
+    background-color:var(--flamboya-darkgrey);
     height: 85px;
+    mix-blend-mode: multiply;
     transition: all ease 0.5s;
 }
 
@@ -51,8 +52,9 @@ body #sitewrap{
 
 #topnav-logo img{
     height: auto;
-    max-height: 70%;
+    max-height: 90%;
     margin-left: 0px;
+    mix-blend-mode: difference;
     transition: all ease 0.5s;
 }
 
@@ -125,27 +127,36 @@ body #sitewrap{
     background: transparent!important;
     border-color: transparent!important;
     color: transparent!important;
+    mix-blend-mode: multiply;
 }
-.fap-toggle::before{
-    content: "FLAMBOYA \A on soundcloud";
+.fap-toggle::after{
+    opacity: 1.0;
+    top: -150px;
+    content:url("http://flamboyan-records.local/wp-content/uploads/2019/06/flamboya_baum_weiss.png");
     position: absolute;
-    top: -32px;
-    color: white;
+   
+    bottom: 0px;
+    transition: all ease 0.5s;
+   /* bottom: 0;*/
+    right: -35vw;
+    mix-blend-mode: difference;
+    
+}
+.fap-toggle::before{  
+    content: "MUSIC";
+    position: absolute;
     left: 69px;
     transition: all ease 0.5s;
-    z-index: 99999;
     color: var(--flamboya-darkgrey) !important;
     font-weight: 700;
     white-space: pre;
-    font-size: 12px;
-}
-.fap-toggle::after{
-    content:url("http://flamboyan-records.local/wp-content/uploads/2019/06/flamboya_baum_weiss.png");
-    position: absolute;
-    top: -70px;
-    left: 0vw;
-    opacity: 1.0;
-    transition: all ease 0.5s;
+    font-size: 32px;
+    right: -50vw;
+    letter-spacing: -5px;
+    
+    top: -102px;
+    color: var(--flamboya-darkgrey);
+    z-index: 999;
 }
 .fap-toggle:hover::after{
     opacity: 1.0;
@@ -157,19 +168,19 @@ body #sitewrap{
     z-index: 999;
 }
 .fap-open .fap-toggle::after{
-    opacity: 1.0;
-    /*top: -241px;*/
+
     top: -70px;
 }
 .fap-open .fap-toggle::before{
-    /*top: -193px;*/
     top: -22px;
-    z-index: -10;
 }
 
+
 .fap-wrapper{
- background: var(--flamboya-white)!important;
+ background: var(--flamboya-darkgrey)!important;
  border: transparent!important;
+ height: 60vh!important;
+ color: white!important
 }
 .fap-meta .fap-title{
  font-size: 28px;
@@ -214,25 +225,36 @@ body.home-page .fap-open .fap-toggle:hover::after {
 /*-----home-----*/
 
 body.home-page{
-    /*background-image:url(http://flamboyan-records.local/wp-content/uploads/2019/01/IMG_9806.jpg);*/
+    background-image:url(http://flamboyan-records.local/wp-content/uploads/2019/01/IMG_9806.jpg);
     background-attachment: fixed;
     background-size: auto 55%;
+    /*background-repeat: repeat-y;*/
     background-repeat: no-repeat;
     background-position: center top;
+    background-color: #0f0f0f!important;
+}
+body.home-page::after{
+ content:"";
+ position: fixed;
+ width:100vw;
+ height: 50vh;
+ background: darkgrey;
 }
 
 body.home-page #sitewrap{
     padding-top: 45vh;
 }
 
- 
-body.home-page #sitewrap{
-    padding-top: 20vh;
-}
-
 body.home-page #content{
     margin-right: 20px;
    /* background-color: var(--flamboya-white);*/
+}
+
+body.home-page .entry-content{
+/* display:none;*/
+ background-color: var(--flamboya-darkgrey);
+ color: white;
+ mix-blend-mode: multiply;
 }
 
 /*body.home-page #content::before{
@@ -311,47 +333,43 @@ body.home-page #content{
   }
 }
 
+.slideOutLeft {
+   margin-left: 240px;
+   width: 0px;
+}
+
 body.home-page h2{
-   background-color: var(--flamboya-white);
+  /* background-color: var(--flamboya-white);*/
    padding: 50px 50px 0px 50px;
    margin-top: 30px;
    margin-bottom: 0px;
 }
-/*body.home-page h2:hover, 
-body.home-page h3:hover,
-body.home-page .entry-content p:hover,
-body.home-page h2:hover + h3, 
-body.home-page h2:hover ~ p:first-of-type,
-body.home-page h3:hover + p,
-body.home-page h2:hover + p,
-body.home-page .entry-content p:hover + .wp-block-button,
-body.home-page .entry-content p:hover + ul*/
 body.home-page .entry-content:hover h2,
 body.home-page .entry-content:hover p,
 body.home-page .entry-content:hover .wp-block-button,
 body.home-page .entry-content:hover ul,
 body.home-page .entry-content:hover h3{
-	background-color: white!important;
+	/*background-color: white!important;*/
 }
 
 body.home-page h3{
-   background-color: var(--flamboya-white);
+/*   background-color: var(--flamboya-white);*/
    padding: 10px 50px 10px 50px;
    margin: 0px;
 }
 body.home-page #buddypress p{
    margin: 0px;
-   background-color: var(--flamboya-white);
+   /*background-color: var(--flamboya-white);*/
    padding: 10px 50px 30px 50px;
 }
 body.home-page .wp-block-button{
    margin: 0px;
-   background-color: var(--flamboya-white);
+   /*background-color: var(--flamboya-white);*/
    padding: 0px 50px 30px 50px;
 }
 body.home-page ul.wp-block-latest-posts{
    margin: 0px;
-   background-color: var(--flamboya-white);
+   /*background-color: var(--flamboya-white);*/
    padding: 0px 50px 30px 50px;
 }
 
@@ -503,16 +521,30 @@ body.blog article .btn-primary:hover {
 
 /*-----footer-----*/
 #footer {
-    /*background-color: var(--flamboya-white);*/
-    background-color: white;
+    background-color: var(--flamboya-darkgrey);
     padding: 0px;
     border: none;
+/*    position: fixed;
+    bottom: 0;*/
+    left: 0;
+    width: 100vw;
+    height: 50px;
 }
 #footer #footer-last {
     background: none;
+/*    position:absolute;*/
+    border:none;
+    bottom:0;
 }
+#footer .navbar-brand{
+ display:none;
+}
+.footernav li{
+ display: inline-block;
+}
+
 #footer a {
-    color: black;
+    color: white;
 }
 #footer li.active a,
 #footer li a:hover,
@@ -574,6 +606,16 @@ body.blog article .btn-primary:hover {
   body.home-page #sitewrap{
     padding-top: 50vh;
   }
+  
+  .fap-toggle::after{
+      opacity: 0.6;
+      top: -70px;
+    }
+   .fap-toggle::before{
+     z-index: 99999;
+     top: -32px;
+     color: white;
+    }
   
       			/*-----Aufbau Article Ansicht muss über Grid gelöst werden -----*/
   body.blog article img {
