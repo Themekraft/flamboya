@@ -33,14 +33,20 @@ body #sitewrap{
     padding-top: 150px;
 }*/
 
+.is-style-outline .wp-block-button__link {
+  border: 2px solid white;
+  color:white;
+}
 
 /*-----navigation-----*/
+.tf-burger{display:none;}
 
 #topnav {
     background-color:var(--flamboya-darkgrey);
     height: 85px;
     mix-blend-mode: multiply;
     transition: all ease 0.5s;
+    border-bottom: 1px solid var(--flamboya-white);
 }
 
 #topnav-logo {
@@ -134,13 +140,10 @@ body #sitewrap{
     top: -150px;
     content:url("http://flamboyan-records.local/wp-content/uploads/2019/06/flamboya_baum_weiss.png");
     position: absolute;
-   
     bottom: 0px;
     transition: all ease 0.5s;
-   /* bottom: 0;*/
-    right: -35vw;
     mix-blend-mode: difference;
-    
+    left: calc(50% + 29px);
 }
 .fap-toggle::before{  
     content: "MUSIC";
@@ -151,12 +154,11 @@ body #sitewrap{
     font-weight: 700;
     white-space: pre;
     font-size: 32px;
-    right: -50vw;
-    letter-spacing: -5px;
-    
+    letter-spacing: -5px;  
     top: -102px;
     color: var(--flamboya-darkgrey);
     z-index: 999;
+    left: calc(50% + 100px);
 }
 .fap-toggle:hover::after{
     opacity: 1.0;
@@ -187,6 +189,7 @@ body #sitewrap{
  text-align: center;
  padding-top: 20px;
  font-weight: 500;
+ margin-top: 18px;
 }
 .fap-wrapper .fap-toolbar > .fap-track-info{
  height: 60px!important;
@@ -194,7 +197,7 @@ body #sitewrap{
 }
 .fap-controls{
  width: 100%!important;
- height: 130px!important;
+ height: 135px!important;
 }
 .fap-wrapper .fap-play-controls {
     margin: 0 auto;
@@ -203,13 +206,13 @@ body #sitewrap{
  height: 30px!important;
 }
 .fap-timebar > .fap-loading-bar{
- border-color: var(--flamboya-darkgrey)!important;
+/* border-color: var(--flamboya-darkgrey)!important;*/
 }
 .fap-loading-bar > div{
  background: transparent none repeat scroll 0% 0%!important;
 }
 .fap-loading-bar > div.fap-progress-bar {
- background: var(--flamboya-darkgrey) none repeat scroll 0% 0%!important;
+ background: white none repeat scroll 0% 0%!important;
 }
 /*body.home-page .fap-toggle::after {
     content:url("http://flamboyan-records.local/wp-content/uploads/2019/06/flamboya_tree_black.png");
@@ -220,7 +223,46 @@ body.home-page .fap-toggle:hover::after {
 body.home-page .fap-open .fap-toggle:hover::after {
     opacity: 0.8;
 }*/
+.fap-current-time,
+.fap-total-time{
+ font-size:20px;
+ line-height:20px;
+}
+.fap-playlist-actions{
+ color:gray;
+}
+.fap-playlist-actions > span {
+ background: transparent;
+}
+.fap-playlist-wrapper .fap-list .fap-item:last-child{
+ background:transparent!important;
+}
+.fap-loop.fap-enabled{
+ background-color:gray;
+ color: black;
+}
+.fap-play-controls {
+ margin-bottom: 40px!important;
+}
 
+.fap-playlist-wrapper .fap-list .fap-item > .fap-title{
+ font-size: 16px;
+ line-height: 30px;
+}
+.fap-playlist-wrapper .fap-list .fap-item .fap-remove{
+ margin-top: 5px;
+ color:gray;
+}
+.fap-playlist-wrapper .fap-list .fap-item{
+ height: auto;
+ border-bottom: 1px solid gray;
+}
+.fap-volume-indicator{
+ background-color: var(--flamboya-white)!important;
+}
+.fap-volume-scrubber{
+ background: gray!important;
+}
 
 /*-----home-----*/
 
@@ -231,7 +273,8 @@ body.home-page{
     /*background-repeat: repeat-y;*/
     background-repeat: no-repeat;
     background-position: center top;
-    background-color: #0f0f0f!important;
+    /*background-color: #0f0f0f!important;*/
+    background-color: black!important;
 }
 body.home-page::after{
  content:"";
