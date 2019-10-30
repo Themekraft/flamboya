@@ -38,6 +38,12 @@ body #sitewrap{
   color:white;
 }
 
+#featured-image-wrap {
+	position: fixed;
+	top: 0px;	.	
+	min-height: 100%;
+	min-width: 100%;
+}
 /*-----navigation-----*/
 .tf-burger{display:none;}
 
