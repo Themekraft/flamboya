@@ -8,6 +8,9 @@
 }
 
 /*-----general-----*/
+html{
+	background-color: transparent;
+}
 
 body{
 	background-color: var(--flamboya-darkgrey)!important;
@@ -43,6 +46,7 @@ body #sitewrap{
 	top: 0px;
 	min-height: 100%;
 	min-width: 100%;
+	z-index: -10;
 }
 /*-----navigation-----*/
 .tf-burger{display:none;}
@@ -273,7 +277,7 @@ body.home-page .fap-open .fap-toggle:hover::after {
 /*-----home-----*/
 
 body.home-page{
-    background-image:url(http://flamboyan-records.local/wp-content/uploads/2019/01/IMG_9806.jpg);
+    /*background-image:url(http://flamboyan-records.local/wp-content/uploads/2019/01/IMG_9806.jpg);*/
     background-attachment: fixed;
     background-size: auto 55%;
     /*background-repeat: repeat-y;*/
