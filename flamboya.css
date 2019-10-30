@@ -144,7 +144,7 @@ body #sitewrap{
 .fap-toggle::after{
     opacity: 1.0;
     top: -150px;
-    content:url("http://flamboyan-records.local/wp-content/uploads/2019/06/flamboya_baum_weiss.png");
+    content:url("https://flamboya.art/wp-content/uploads/2019/06/flamboya_baum_weiss.png");
     position: absolute;
     bottom: 0px;
     transition: all ease 0.5s;
