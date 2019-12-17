@@ -12,7 +12,7 @@ get_header(); ?>
 <div class="main-content">
   <div class="container">
     <div class="row">
-
+archive
 			<div id="content" class="main-content-inner col-xs-12 <?php if ( get_theme_mod( 'larry_blog_archive_sidebars' ) == true ) { echo 'col-md-8'; } ?>">
 
 				<?php // add the class "panel" below here to wrap the content-padder in Bootstrap style ;) ?>

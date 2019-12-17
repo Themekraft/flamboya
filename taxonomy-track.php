@@ -10,19 +10,19 @@ echo do_shortcode("[mbYTPlayer url='https://youtu.be/gMCVoUiyWxE' autoplay='true
 get_header(); ?>
 achso
 <div class="main-content">
-    <div class="container">
-        <div class="row">
+  <div class="container">
+    <div class="row">
 
-            <div id="content" class="main-content-inner col-xs-12 <?php if ( get_theme_mod( 'larry_blog_archive_sidebars' ) == true ) { echo 'col-md-8'; } ?>">
+			<div id="content" class="main-content-inner col-xs-12 <?php if ( get_theme_mod( 'larry_blog_archive_sidebars' ) == true ) { echo 'col-md-8'; } ?>">
 
 				<?php // add the class "panel" below here to wrap the content-padder in Bootstrap style ;) ?>
-                <div class="content-padder">
+				<div class="content-padder">
 
 					<?php if ( have_posts() ) : ?>
 
-                        <!--						<header>-->
-                        <!--							<h1 class="page-title">-->
-                        <!--								--><?php
+<!--						<header>-->
+<!--							<h1 class="page-title">-->
+<!--								--><?php
 //                  if  ( is_category() ) :
 //										single_cat_title();
 //
@@ -70,43 +70,43 @@ achso
 //
 //									endif;
 //								?>
-                        <!--							</h1>-->
-                        <!--							--><?php
+<!--							</h1>-->
+<!--							--><?php
 //								// Show an optional term description.
 //								$term_description = term_description();
 //								if ( ! empty( $term_description ) ) :
 //									printf( '<div class="taxonomy-description">%s</div>', $term_description );
 //								endif;
 //							?>
-                        <!--						</header><!-- .page-header -->-->
+<!--						</header><!-- .page-header -->-->
 
-                        <div class="row">
+            <div class="row">
 
-							<?php /* Start the Loop */ ?>
-							<?php while ( have_posts() ) : the_post(); ?>
-
-
-								<?php get_template_part( 'content-music-3-col', get_post_format() ); ?>
-
-							<?php endwhile; ?>
-
-							<?php _tk_content_nav( 'nav-below' ); ?>
+      					<?php /* Start the Loop */ ?>
+                <?php while ( have_posts() ) : the_post(); ?>
 
 
+        							<?php get_template_part( 'content-music-3-col', get_post_format() ); ?>
 
-                        </div>
+      					<?php endwhile; ?>
 
-					<?php else : ?>
+    					<?php _tk_content_nav( 'nav-below' ); ?>
 
-						<?php get_template_part( 'no-results', 'archive' ); ?>
 
-					<?php endif; ?>
 
-                </div><!-- .content-padder -->
             </div>
 
-			<?php if ( get_theme_mod( 'larry_blog_archive_sidebars' ) == true ) : ?>
-				<?php get_sidebar(); ?>
-			<?php endif; ?>
+  					<?php else : ?>
 
-			<?php get_footer(); ?>
+  						<?php get_template_part( 'no-results', 'archive' ); ?>
+
+  					<?php endif; ?>
+
+				</div><!-- .content-padder -->
+      </div>
+
+<?php if ( get_theme_mod( 'larry_blog_archive_sidebars' ) == true ) : ?>
+  <?php get_sidebar(); ?>
+<?php endif; ?>
+
+<?php get_footer(); ?>

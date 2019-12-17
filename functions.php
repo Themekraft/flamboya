@@ -604,3 +604,23 @@ function blog_template_style()
     
     return $template_style;
 }
+
+
+
+
+
+
+
+/*
+CHANGE SLUGS OF CUSTOM POST TYPES
+*/
+function change_post_types_slug( $args, $post_type ) {
+
+	/*item post type slug*/
+	if ( 'track' === $post_type ) {
+		$args['rewrite']['slug'] = 'music';
+	}
+
+	return $args;
+}
+add_filter( 'register_post_type_args', 'change_post_types_slug', 10, 2 );
