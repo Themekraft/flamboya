@@ -14,7 +14,7 @@ achso
         <div class="row">
 
             <div id="content" class="main-content-inner col-xs-12 <?php if ( get_theme_mod( 'larry_blog_archive_sidebars' ) == true ) { echo 'col-md-8'; } ?>">
-
+	            <?php do_action('show_beautiful_filters'); ?>
 				<?php // add the class "panel" below here to wrap the content-padder in Bootstrap style ;) ?>
                 <div class="content-padder">
 
